@@ -73,19 +73,28 @@
 |R6|Responsive screen|Game layout not adapting correctly to various screen sizes|high|high|high|Apply responsive CSS grid/flexbox; test on multiple devices and breakpoints; use Chrome DevTools to simulate screens|
 |R7|UI Buttons|Buttons freeze or overlap after rapid clicks|medium|medium|medium|Conduct rapid-click stress test; debounce actions|
 |R8|Instructions / Rules|Player misinterprets hint cost or bonus rule|medum|medium|medium|Improve wording in Rules section; add in-game tooltip|
+|R9|Puzzle variety|Game shows same or limited puzzles repeatedly instead of random new ones|high|high|high|Expand word database or randomize puzzle selection logic; test multiple sessions|
 
 
 ### Risk Coverage
 
-- Tested Risks Percent: 
-- Untested Risks Percent: 
+- Tested Risks Percent: 90%
+- Untested Risks Percent: 10%
 
 ## Test Cases
 
 | ID | Feature | Objective | Expected Result | Actual Result | Status | Risk Link |
 |----|---------|-----------|----------------|---------------|--------|-----------|
-| T1|Reset Game |Verify reset clears score and progress |Resets to 0 | works as expected| passed|R1 |
-|
+|T1|Reset Game |Verify reset clears score and progress |Resets to 0 | works as expected| passed|R1 |
+|T2|Leaderboard|Validate descending sort (top 3 scores)|Sort correctly|works as expected|passed|R2|
+|T3|Bonus Round|Verify ×2 score every 3rd puzzle|Bonus applied|work as expected|passes|R3|
+|T4|Hint system|Verify hint deducts 2 points|Deduction works correctly|works as expected|passed|R4|
+|T5|Scoring|Verify +10 points added for solving without hint|Components resize and align properly|Each correct word adds +10|Points added correctly|passed|R5|
+|T6|Responsive screen|Verify layout adjusts to different devices|Components resize and align properly|Layout breaks on small screens|failed|R6|
+|T7|UI buttons|Test rapid clicks stability|No freeze/overlap|Minor lag|passed|R7|
+|T8|Instruction|Evaluate clarity of rules|Player understands rules|slightly confusing|failed|R8|
+|T9|Puzzle Variety|Verify new random puzzles appear after each solved one|Different words shown each round|Same few puzzles repeating|failed|R9|
+
 
 ## Defects
 
