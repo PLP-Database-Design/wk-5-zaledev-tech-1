@@ -84,7 +84,8 @@
 
 | ID | Feature | Objective | Expected Result | Actual Result | Status | Risk Link |
 |----|---------|-----------|----------------|---------------|--------|-----------|
-| | | | | | | |
+| T1|Reset Game |Verify reset clears score and progress |Resets to 0 | works as expected| passed|R1 |
+|
 
 ## Defects
 
