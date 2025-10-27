@@ -1,80 +1,78 @@
-# 🧪 Final Group Test Report Template — Word Puzzle Game Plus
-
-**Level:** Intermediate QA | **Week 5:** Test Management
-
+# 🧪 Final Group Test Report — Word Puzzle Game Plus  
+**Level:** Intermediate QA | **Week 5:** Test Management  
 **Course:** Software Testing & Quality Assurance  
 **Module:** Test Management (Week 5)  
 **Project Type:** Group Assessment  
-**Submission Date:** 2025-10-28
+**Submission Date:** 2025-10-28  
 
-## Team Information
+---
 
-| Role | Name | Responsibilities |
-|------|------|------------------|
-| Test Manager | | Planning, scheduling, coordination, metric tracking |
-| Risk Analyst | | Risk identification, prioritization, test design linkage |
-| Test Executor | | Execution, evidence capture, defect logging |
+## 👥 Team Information
 
-## Group Rules
+| Role            | Name               | Responsibilities |
+|-----------------|--------------------|------------------|
+| Test Manager    | Asmamaw Yismaw     | Planning, scheduling, coordination, metric tracking |
+| Risk Analyst    | Jostina Mwamburi   | Risk identification, prioritization, test design linkage |
+| Test Executor   | Whitney Shisia     | Execution, evidence capture, defect logging |
 
-- Each student must belong to only one group.
-- Duplicate membership or multiple submissions will result in invalidation.
-- Every group member must contribute towards this project
+&gt; ⚠️ Group rule confirmed: each member appears in **only one** submission.
 
-## Project Overview
+---
+
+## 🕹️ Project Overview
 
 **System Under Test:** Word Puzzle Game Plus  
-**Technology Stack:** HTML, CSS, JavaScript  
-**Environment:** Chrome Browser (Desktop)
+**Technology Stack:** HTML, CSS, Vanilla JavaScript  
+**Environment:** Chrome 118 / Windows 11 (DevTools responsive mode tested)  
+**Code Base:** [https://github.com/PLP-Database-Design/wk-5-zaledev-tech-1]
 
 ### Features Under Test
 
-| Feature | Description | Risk Category |
-|---------|-------------|---------------|
-| Reset Game | Clears score and progress instantly | |
-| Leaderboard | Stores top 3 scores in localStorage | |
-| Bonus Round | Every 3 puzzles → doubles score | |
+| Feature      | Description                                      | Risk Category |
+|--------------|--------------------------------------------------|---------------|
+| Reset Game   | Clears score & progress instantly                | State integrity |
+| Leaderboard  | Persists top-3 scores in localStorage            | Data boundary |
+| Bonus Round  | Every 3 solved puzzles → score ×2                | Arithmetic / timing |
 
-## Test Plan
+---
+
+## 📋 Test Plan
 
 ### Objectives
-
-- 
+- Validate functional correctness of new features  
+- Achieve ≥ 80 % risk coverage  
+- Keep defect density ≤ 0.3  
+- All **high-priority** risks must have **≥ 1 test case**
 
 ### Scope
+**In Scope:**  
+- Reset logic, leaderboard CRUD, bonus arithmetic, input validation, UI feedback, localStorage edge cases  
 
-**In Scope:**
-- 
-
-**Out of Scope:**
-- 
+**Out of Scope:**  
+- Accessibility audit (planned next sprint), performance profiling, multiplayer features
 
 ### Tools & Resources
-
-- 
+- **Test Board:** GitHub Projects (Kanban)  
+- **Defects:** GitHub Issues with labels `severity:*` + `risk:*`  
+- **Browser:** Google Chrome  
+- **Snipping Tool:** Windows Sniping tool screenshots & screen recordings
 
 ### Schedule
 
-| Phase | Planned Duration | Actual Duration | Status |
-|-------|------------------|-----------------|--------|
-| | | | |
+| Phase            | Planned Duration | Actual Duration | Status   |
+|------------------|------------------|-----------------|----------|
+| Planning         | 2 h              | 2 h             | ✅       |
+| Risk Analysis    | 3 h              | 3 h             | ✅       |
+| Test Design      | 4 h              | 5 h             | ✅       |
+| Execution        | 6 h              | 7 h             | ✅       |
+| Regression       | 1 h              | 1 h             | ✅       |
+| Report Assembly  | 2 h              | 2 h             | ✅       |
 
-## Risk Analysis
+### Entry / Exit Criteria
+- **Entry:** Code frozen in `main`, deployed to GitHub Pages, smoke test green  
+- **Exit:** All high-priority test cases executed, zero critical defects, metrics approved by Test Manager
 
-### Risks
-
-| ID | Feature | Risk Description | Likelihood | Impact | Priority | Mitigation Strategy |
-|----|---------|------------------|------------|--------|----------|---------------------|
-| R1|Reset Game |Reset button fails to clear score or puzzle progress correctly |high|high |high |Conduct repeated reset tests; verify counters reset to zero and game state reinitialized |
-|R2|Leaderboard|Scores not stored or sorted correctly in localStorage|high|high|high|Test multiple scores|
-|R3|Bonus Round|Bonus not triggered after every 3 puzzles|medium|medium|medium|Test sequences (3rd, 6th, 9th puzzles); confirm doubled score applied|
-|R4|Hint system|Hint deduction (-2 points) misapplied or double-counted|medium|medium|medium|Verify hint deduction sequence and total score after use|
-|R5|Scoring|Score overflow or negative value after repeated bonuses|low|low|low|Add boundary checks and validation for score value|
-|R6|Responsive screen|Game layout not adapting correctly to various screen sizes|high|high|high|Apply responsive CSS grid/flexbox; test on multiple devices and breakpoints; use Chrome DevTools to simulate screens|
-|R7|UI Buttons|Buttons freeze or overlap after rapid clicks|medium|medium|medium|Conduct rapid-click stress test; debounce actions|
-|R8|Instructions / Rules|Player misinterprets hint cost or bonus rule|medum|medium|medium|Improve wording in Rules section; add in-game tooltip|
-|R9|Puzzle variety|Game shows same or limited puzzles repeatedly instead of random new ones|high|high|high|Expand word database or randomize puzzle selection logic; test multiple sessions|
-
+---
 
 ### Risk Coverage
 
@@ -140,30 +138,33 @@
 
 
 
-**Progress Tracking Method:**  
-**Change Control Notes:**
+**Progress Tracking:** Daily burn-down in GitHub Project, WhatsApp Group and Google Meet  
+**Change Control:** Any scope change discussed in Teams channel → logged as issue #15
 
 ## Lessons Learned
 
-- Most Defect Prone Feature: 
-- Risk Analysis Impact: 
-- Team Communication Effectiveness: 
-- Improvements for Next Cycle: 
+- Most Defect Prone Feature: Bonus-round arithmetic (off-by-one)
+- Risk Analysis Impact: 83 % coverage focused 70 % of effort on high-priority areas
+- Team Communication Effectiveness: It was very good communication we use WhatsApp for texting & Google Meeting to take meetings and of course email conversation
+- Improvements for Next Cycle: Automate regression with Cypress  
+                             : Add accessibility risk category  
+                             : Introduce static analysis (ESLint) to catch JS off-by-one earlier
+  
 
 ## Attachments
 
-- 
+- # Nothing to attache here
 
 ## Sign Off
 
 | Name | Role | Initials | Date |
 |------|------|-----------|------|
-| | Test Manager | | |
-| | Risk Analyst | | |
-|Whitney Shisia | Test Executor |W.S | 10/27/2025|
+| Asmamaw Yismaw | Test Manager | A.Y | 10/26/26 |
+| Jostina Mwamburi | Risk Analyst | J.M|10/26/2025 |
+| Whitney Shisia | Test Executor | W.S| 10/26/2025|
 
 ## Overall Summary
 
 **Statement:** 
 
-**Test Status:** ☐ Completed / ☐ In Progress / ☐ Deferred
+**Test Status:** ✅ Completed / ☐ In Progress / ☐ Deferred
